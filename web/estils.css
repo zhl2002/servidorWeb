@@ -1,0 +1,53 @@
+/* Definicions de classes utils genèriques */
+.desktop { display: flex !important; }
+.mobile  { display: flex !important; }
+@media only screen and (max-device-width: 599px) { .desktop { display: none !important; } }
+@media only screen and (min-device-width: 600px) { .mobile  { display: none !important; } }
+.flex       { display: flex; }
+.flexRow    { flex-direction: row; }
+.flexColumn { flex-direction: column; }
+.none       { display: none; }
+.halfWidth  { max-width: 50%; }
+.botoIcona  { cursor: pointer; }
+
+/* Definicions específiques */
+table, th, td {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+body {
+    font-family: "Open Sans";
+}
+body > div {
+    display: none;
+}
+body > #frontendHome {
+    display: flex;
+}
+.botoMenu {
+    color: blue;
+    cursor: pointer;
+    margin: 0 16px;
+}
+.botoMenu:hover {
+    text-decoration: underline;
+}
+#productesContinguts {
+    width: 100%;
+}
+#popups {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+#popups > div {
+    border: solid 1px black;
+    background-color: lightcyan;
+    display: none;
+}

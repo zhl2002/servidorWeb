@@ -1,0 +1,27 @@
+{
+  "name": "servidor",
+  "version": "1.0.0",
+  "description": "Servidor base",
+  "keywords": [],
+  "author": {
+    "name": "Nom de l'autor",
+    "email": "autor@exemple.com"
+  },
+  "homepage": "http://www.exemple.com/",
+  "private": true,
+  "dependencies": {
+    "crypto": "latest",
+    "express": "latest",
+    "mysql": "latest",
+    "supervisor": "latest"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "main": "./server.js",
+  "scripts": {
+    "start": "node ./server.js",
+    "watch": "npm run app",
+    "app": "supervisor --extensions node,js,html,css --ignore data,.git,node_modules --ignore-symlinks node -- ./server.js",
+    "postinstall": ""
+  }
+}
