@@ -48,7 +48,9 @@ exit;
 ```
 
 Per configurar la base de dades al servidor, modificar l'arxiu:
+```
 ./servidorWeb/servidor/db.js
+```
 
 (Bé configurat amb els paràmetres d'exemple d'aquesta pàgina)
 
