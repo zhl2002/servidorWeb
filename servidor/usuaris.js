@@ -6,7 +6,7 @@ class Obj {
     constructor () {
     }
 
-    // Inicia la connexió amb la base de dades
+    // Inicia l'objecte
     init () {
         // TODO
     }
