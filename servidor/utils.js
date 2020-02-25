@@ -69,6 +69,40 @@ class Obj {
             })
         })
     }
+
+    // Guarda imatge tipus 'base64' a un arxiu (el path no ha de tenir el '.extensio')
+    guardaImatge (path, dades) {
+        return new Promise(async (resolve, reject) => {
+            let base64Data = null,
+                binaryData = null,
+                fullPath = ''
+
+            // Transformem la imatge de 'base64' a arxiu binari
+            if (dades.indexOf('png;base64') !== -1) {
+                base64Data  = dades.replace(/^data:image\/png;base64,/, '')
+                fullPath = path + '.png'
+            }
+            if (dades.indexOf('jpeg;base64') !== -1) {
+                base64Data  = dades.replace(/^data:image\/jpeg;base64,/, '')
+                fullPath = path + '.jpg'
+            }
+            if (dades.indexOf('webp;base64') !== -1) {
+                base64Data  = dades.replace(/^data:image\/jpeg;base64,/, '')
+                fullPath = path + '.webp'
+            }
+            base64Data  +=  base64Data.replace('+', ' ')
+            binaryData  =   Buffer.from(base64Data, 'base64').toString('binary')
+
+            // Guardem la imatge en un arxiu binari
+            try {
+                await this.guardaArxiu(fullPath, binaryData, 'binary')
+            } catch (e) {
+                return reject(e) 
+            }  
+            
+            return resolve(fullPath)
+        }) 
+    }
 }
 
 // Export

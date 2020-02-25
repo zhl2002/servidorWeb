@@ -123,9 +123,7 @@ class Obj {
             taula = [],
             resultatInsert = null,
             insertId = 0,
-            base64Data = '',
-            binaryData = null,
-            imageType = 'png'
+            pathImatgeComplet = ''
 
         // Forçem una espera perquè es vegi la càrrega (TODO: esborrar-ho)
         await utils.promiseWait(1000) 
@@ -165,32 +163,20 @@ class Obj {
                 // Si han pujat una imatge, la guardem
                 if (data.imatge !== '') {
                     insertId = resultatInsert.insertId
-                    // Transformem la imatge de 'base64' a arxiu binari
-                    if (data.imatge.indexOf('png;base64') !== -1) {
-                        base64Data  = data.imatge.replace(/^data:image\/png;base64,/, '')
-                        imageType = 'png'
-                    }
-                    if (data.imatge.indexOf('jpeg;base64') !== -1) {
-                        base64Data  = data.imatge.replace(/^data:image\/jpeg;base64,/, '')
-                        imageType = 'jpg'
-                    }
-                    base64Data  +=  base64Data.replace('+', ' ')
-                    binaryData  =   Buffer.from(base64Data, 'base64').toString('binary')
-                    // Guardem la imatge
+                    // Guardem la imatge en un arxiu
                     try {
-                        await utils.guardaArxiu('./web/imatges/usuari-' + insertId + '.'  + imageType, binaryData, 'binary')
+                        pathImatgeComplet = await utils.guardaImatge('./web/imatges/usuari-' + insertId, data.imatge)
                     } catch (e) {
                         console.log(e)
-                        return result.json({ resultat: "ko", missatge: "Error, funcio usuaris.guarda: no s'ha pogut guardar la imatge d'usuari al insert"})  
+                        return result.json({ resultat: "ko", missatge: "Error, funcio usuaris.guarda: hi ha hagut un error al guardar la imatge al insert"})  
                     }
                     // Actualitzem el camp imatge
                     try {
-                        sql = 'UPDATE usuaris SET imatge="/web/imatges/usuari-' + insertId + '.' + imageType + '" WHERE id=' + insertId
+                        sql = 'UPDATE usuaris SET imatge="' + pathImatgeComplet + '" WHERE id=' + insertId
                         await db.promiseQuery(sql)
                     } catch (e) {
                         console.log(e)
                         return result.json({ resultat: "ko", missatge: "Error, funcio usuaris.guarda: hi ha hagut un error al actualitzar el nom de la imatge al insert"})  
-                        console.log('update', taula)
                     }
                 }
             } else {
@@ -204,30 +190,19 @@ class Obj {
                 }
                 // Si han pujat una imatge, la guardem
                 if (data.imatge !== '') {
-                    // Transformem la imatge de 'base64' a arxiu binari
-                    if (data.imatge.indexOf('png;base64') !== -1) {
-                        base64Data  = data.imatge.replace(/^data:image\/png;base64,/, '')
-                        imageType = 'png'
-                    }
-                    if (data.imatge.indexOf('jpeg;base64') !== -1) {
-                        base64Data  = data.imatge.replace(/^data:image\/jpeg;base64,/, '')
-                        imageType = 'jpg'
-                    }
-                    base64Data  +=  base64Data.replace('+', ' ')
-                    binaryData  =   Buffer.from(base64Data, 'base64').toString('binary')
-                    // Guardem la imatge
+                    // Guardem la imatge en un arxiu
                     try {
-                        await utils.guardaArxiu('./web/imatges/usuari-' + data.id + '.'  + imageType, binaryData, 'binary')
+                        pathImatgeComplet = await utils.guardaImatge('./web/imatges/usuari-' + data.id, data.imatge)
                     } catch (e) {
-                        return result.json({ resultat: "ko", missatge: "Error, funcio usuaris.guarda: no s'ha pogut guardar la imatge d'usuari al update"})  
+                        console.log(e)
+                        return result.json({ resultat: "ko", missatge: "Error, funcio usuaris.guarda: hi ha hagut un error al guardar la imatge al update"})  
                     }
                     // Actualitzem el camp imatge
                     try {
-                        sql = 'UPDATE usuaris SET imatge="/web/imatges/usuari-' + data.id + '.' + imageType + '" WHERE id=' + data.id
+                        sql = 'UPDATE usuaris SET imatge="' + pathImatgeComplet + '" WHERE id=' + data.id
                         await db.promiseQuery(sql)
                     } catch (e) {
                         return result.json({ resultat: "ko", missatge: "Error, funcio usuaris.guarda: hi ha hagut un error al actualitzar el nom de la imatge al update"})  
-                        console.log('update', taula)
                     }
                 }
             }

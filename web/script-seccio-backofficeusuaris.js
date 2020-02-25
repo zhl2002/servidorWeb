@@ -90,6 +90,9 @@ class ObjSeccioBackofficeUsuaris {
             }
         }
 
+        // Buidem el valor de les dades de imatge (només serveix per quan escullen una nova imatge)
+        this.codiImatge = ''
+
         // Mostra el botó esborra del popup
         refEsborra.style.display = 'flex'
 
@@ -112,6 +115,9 @@ class ObjSeccioBackofficeUsuaris {
         refTipus.value = ''
         refCodi.value = ''
         refImatge.src = '/web/imatges/transparent.png'
+
+        // Buidem el valor de les dades de imatge (només serveix per quan escullen una nova imatge)
+        this.codiImatge = ''
 
         // Amaga el botó esborra del popup
         refEsborra.style.display = 'none'
@@ -214,7 +220,6 @@ class ObjSeccioBackofficeUsuaris {
             refArxiu = document.getElementById('backofficeUsuarisArxiu'),
             refImatge = document.getElementById('backofficeUsuarisImg')
 
-        console.log('aaa')
         reader.onload = (evt) => {
             this.codiImatge = evt.target.result
             refImatge.src = evt.target.result
