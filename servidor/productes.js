@@ -51,7 +51,7 @@ class Obj {
             return result.json({ resultat: "ko", missatge: "Error, funció llistatProductes: ha fallat la crida a les dades"})  
         }   
     
-        // Si l'usuari existeix i s'ha identificat correctament (amb codi o amb token) retornem 'ok'
+        // Si hem aconseguit dades corectament, tornem la taula resultant
         if (typeof taula === 'object' && typeof taula.length === 'number') {
             result.json({ resultat: "ok", missatge: taula })
         } else {
