@@ -31,7 +31,7 @@ class ObjSeccioFrontendProductes {
             }
         }
 
-        // Amaguem la càrrega i mostrem el llistat de productes en una taula
+        // Amaguem la càrrega i mostrem el llistat de productes
         refContinguts.innerHTML = codiHTML
         refContinguts.style.display = 'flex'
         refLoading.style.display = 'none'
