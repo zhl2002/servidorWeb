@@ -87,7 +87,7 @@ class Obj {
                 fullPath = path + '.jpg'
             }
             if (dades.indexOf('webp;base64') !== -1) {
-                base64Data  = dades.replace(/^data:image\/jpeg;base64,/, '')
+                base64Data  = dades.replace(/^data:image\/webp;base64,/, '')
                 fullPath = path + '.webp'
             }
             base64Data  +=  base64Data.replace('+', ' ')
