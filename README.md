@@ -28,7 +28,9 @@ sudo apt install git
 ### Codi del servidor ###
 
 Cal descarregar el codi de 'github'
+```
 git clone https://github.com/optimisme/servidorWeb.git
+```
 
 Per descarregar els mòduls del servidor web:
 ```
