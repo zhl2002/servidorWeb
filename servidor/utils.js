@@ -91,7 +91,7 @@ class Obj {
                 fullPath = path + '.webp'
             }
             base64Data  +=  base64Data.replace('+', ' ')
-            binaryData  =   Buffer.from(base64Data, 'base64').toString('binary')
+            binaryData  = Buffer.from(base64Data, 'base64').toString('binary')
 
             // Guardem la imatge en un arxiu binari
             try {
