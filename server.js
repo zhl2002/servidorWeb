@@ -27,6 +27,7 @@ app.use('/call', cridaAJAX)
 
 // Rutes estàtiques per servir arxius
 app.use('/web', express.static(path.join(__dirname + '/web/')))
+app.use('/favicon.ico', (crida, resposta) => { resposta.sendFile(path.join(__dirname + '/web/appicons/favicon.ico')) })
 app.use('/', (crida, resposta) => { resposta.sendFile(path.join(__dirname + '/web/index.html')) })
 
 // Posar el servidor en funcionament
