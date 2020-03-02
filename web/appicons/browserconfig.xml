@@ -3,7 +3,6 @@
     <msapplication>
         <tile>
             <square70x70logo src="/web/appicons/ms-icon-70x70.png"/>
-            <square150x150logo src="/web/appicons/ms-icon-150x150.png"/>
             <square310x310logo src="/web/appicons/ms-icon-310x310.png"/>
             <TileColor>#ffffff</TileColor>
         </tile>
