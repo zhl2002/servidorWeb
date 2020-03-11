@@ -31,6 +31,10 @@ body > #frontendProductes {
     display: none;
 }
 
+body > #frontendProductes > #productesContinguts {
+    width: 100%;
+}
+
 body > #frontendContacte {
     display: none;
 }
@@ -44,6 +48,20 @@ body > #backofficeProductes {
 }
 
 body > #popups {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#popups > div {
+    border: solid 1px black;
+    background-color: lightcyan;
     display: none;
 }
 
@@ -55,22 +73,4 @@ body > #popups {
 .botoMenu:hover {
     text-decoration: underline;
 }
-#productesContinguts {
-    width: 100%;
-}
-#popups {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-#popups > div {
-    border: solid 1px black;
-    background-color: lightcyan;
-    display: none;
-}
+
