@@ -18,12 +18,35 @@ table, th, td {
 body {
     font-family: "Open Sans";
 }
-body > div {
-    display: none;
-}
+
 body > #frontendHome {
     display: flex;
 }
+
+body > #frontendPresentacio {
+    display: none;
+}
+
+body > #frontendProductes {
+    display: none;
+}
+
+body > #frontendContacte {
+    display: none;
+}
+
+body > #backofficeUsuaris {
+    display: none;
+}
+
+body > #backofficeProductes {
+    display: none;
+}
+
+body > #popups {
+    display: none;
+}
+
 .botoMenu {
     color: blue;
     cursor: pointer;
