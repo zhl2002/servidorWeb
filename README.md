@@ -107,7 +107,10 @@ npm install
 - El primer cop canviareu la carpeta 'web' per la vostra
 - El primer cop feu un 'npm install' perquè descarregui els 'node_modules' del vostre sistema
 - Modifiqueu l'arxiu README.md, que hi quedi només el vostre nom
-- Comproveu que funciona amb 'npm run app'
+- Comproveu que funciona amb:
+```
+npm run app
+```
 - Envieu els canvis a github amb:
 ```
 cd servidorWeb (o la carpeta del fork)
