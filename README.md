@@ -27,6 +27,8 @@ sudo apt install git
 
 ### Codi del servidor ###
 
+**NOTA:** Mireu la part d'entregues per fer el fork d'aquest servidor
+
 Cal descarregar el codi de 'github'
 ```
 git clone https://github.com/optimisme/servidorWeb.git
@@ -57,8 +59,6 @@ Per configurar la base de dades al servidor, modificar l'arxiu:
 (Està configurat amb els paràmetres d'exemple d'aquesta pàgina)
 
 ### Fer anar el servidor ###
-
-**NOTA:** Mireu la part d'entregues per fer el fork d'aquest servidor
 
 Des del mateix directori 'servidorWeb':
 ```
