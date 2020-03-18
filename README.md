@@ -80,13 +80,13 @@ Cal que feu una pàgina web d’una agència de viatges amb les següents especi
 
 ### Entregues ###
 
-| 09/03/20 | Menú                                    |
-| 16/03/20 | Presentació i contacte                  |
-| 23/03/20 | Productes                               |
-| 06/04/20 | Gestió d'usuaris                        |
-| 20/04/20 | Gestió de productes                     |
-| 04/05/20 | Pàgina d'inici amb productes dinàmics   |
-| 18/05/20 | Pàgina de productes individual          |
-| 25/05/20 | Revisió, bugs arreglats i entrega       |
+| 09/03/20 | Menú |
+| 16/03/20 | Presentació i contacte |
+| 23/03/20 | Productes |
+| 06/04/20 | Gestió d'usuaris |
+| 20/04/20 | Gestió de productes |
+| 04/05/20 | Pàgina d'inici amb productes dinàmics |
+| 18/05/20 | Pàgina de productes individual |
+| 25/05/20 | Revisió, bugs arreglats i entrega |
 
 
