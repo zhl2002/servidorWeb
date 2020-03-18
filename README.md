@@ -100,6 +100,8 @@ Per fer les entregues cal que feu un fork al vostre compte de github
 - Descarregueu el codi del vostre 'fork' amb el git clone, que serà semblant a:
 ```
 git clone https://github.com/ELVOSTREUSUARIGITHUB/servidorWeb.git
+cd servidorWeb (o la carpeta del fork)
+npm install
 ```
 - Modifiqueu el codi del vostre fork per treballar
 - El primer cop canviareu la carpeta 'web' per la vostra
