@@ -31,7 +31,7 @@ app.use('/favicon.ico', (crida, resposta) => { resposta.sendFile(path.join(__dir
 app.use('/', (crida, resposta) => { resposta.sendFile(path.join(__dirname + '/web/index.html')) })
 
 // Posar el servidor en funcionament
-app.listen(port, () => console.log('Example app listening on port:', port))
+app.listen(port, () => console.log('App listening on port:', port, '\nNavigate to: http://localhost:' + port))
 
 
 // Funcions personalitzades
