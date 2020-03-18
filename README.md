@@ -25,21 +25,6 @@ sudo apt install mariadb-server
 sudo apt install git
 ```
 
-### Codi del servidor ###
-
-**NOTA:** Mireu la part d'entregues per fer el fork d'aquest servidor
-
-Per descarregar el codi del servidor
-```
-git clone https://github.com/optimisme/servidorWeb.git
-```
-
-Per descarregar els mòduls del servidor web:
-```
-cd servidorWeb
-npm install
-```
-
 ### Base de dades ###
 
 Cal donar d'alta una base de dades:
@@ -57,6 +42,21 @@ Per configurar la base de dades al servidor, modificar l'arxiu:
 ```
 
 (Està configurat amb els paràmetres d'exemple d'aquesta pàgina)
+
+### Codi del servidor ###
+
+**NOTA:** Mireu la part d'entregues per fer el fork d'aquest servidor
+
+Per descarregar el codi del servidor
+```
+git clone https://github.com/optimisme/servidorWeb.git
+```
+
+Per descarregar els mòduls del servidor web:
+```
+cd servidorWeb
+npm install
+```
 
 ### Fer anar el servidor ###
 
