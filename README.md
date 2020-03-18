@@ -58,6 +58,8 @@ Per configurar la base de dades al servidor, modificar l'arxiu:
 
 ### Fer anar el servidor ###
 
+**NOTA:** Mireu la part d'entregues per fer el fork d'aquest servidor
+
 Des del mateix directori 'servidorWeb':
 ```
 npm run app
@@ -110,7 +112,7 @@ git add .
 git commit -m "Explicació de les modificacions que heu fet"
 git push
 ```
-- Aquestes tres últimes línies les haureu d'anar fent cada cop que envieu canvis a github
+- Aquestes tres últimes línies les haureu d'anar executant cada cop que envieu canvis a github
 - El primer cop us demanarà el mail i codi de github
 
 
