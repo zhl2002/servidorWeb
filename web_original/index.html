@@ -7,7 +7,6 @@
         <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
         <link rel='stylesheet' href='https://code.getmdl.io/1.3.0/material.indigo-pink.min.css'>
         <link rel='stylesheet' href='/web/estils.css'>
-        <link href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap" rel="stylesheet">
         <script src='https://code.getmdl.io/1.3.0/material.min.js' defer></script>
         <script src='/web/script-login.js'></script>
         <script src='/web/script-navegacio.js'></script>
@@ -16,10 +15,18 @@
         <script src='/web/script-seccio-frontendproductes.js'></script>
         <script src='/web/script-utils.js'></script>
         <script src='/web/script.js'></script>
+
+        <!-- Icones d'aplicació per a navegadors d'escriptori, webapps iOS i webapps Android -->
+        <!-- Icones generats amb: https://www.favicon-generator.org/ -->
+        <link href="/web/appicons/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
+        <link href="/web/appicons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/web/appicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link href="/web/appicons/manifest.json" rel="manifest">
     </head>
     <body onload='inicia()'>
         <div id='frontendMenuWeb' class='flexRow desktop'>
-            <img id='fotomenu' src="/web/imatges/logo.png">
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendHome")'>Inici</div>
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendPresentacio")'>Presentació</div>
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendProductes")'>Productes</div>
@@ -28,7 +35,6 @@
             <div id='botoGestioUsuarisWeb' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeUsuaris")'>Gestió usuaris</div>
             <div id='botoGestioProductesWeb' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeProductes")'>Gestió productes</div>
             <div id='botoLogoutWeb' class='botoMenu none' onclick='login.tancaLaSessio()'>Sortir</div>
-            <img id='fotomenu' src="/web/imatges/logo.png">
         </div>
         <div id='frontendMenuMobil' class='flexColumn mobile'>
             <div class='botoMenu' onclick='navegacio.canviaSeccio("frontendHome")'>Inici</div>
@@ -41,7 +47,7 @@
             <div id='botoLogoutMobil' class='botoMenu none' onclick='login.tancaLaSessio()'>Sortir</div>
         </div>
         <div id='frontendHome'>
-            
+            Pàgina principal
         </div>
         <div id='frontendPresentacio'>
             Pàgina amb una presentacio de l'empresa
@@ -51,89 +57,7 @@
             <div id='productesContinguts' class='flexColumn'></div>
         </div>
         <div id='frontendContacte'>
-            <div id='cajas'>
-
-                <div id='cajaizquierda'>
-                    <form action='/paginaAccio' target='_blank' method='GET'>
-                        <legend>INFORMACIÓN DEL VIAJERO</legend>
-                        <div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
-                            <input class='mdl-textfield__input' type='text' id='firstname' pattern="[^0-9]*">
-                            <label class='mdl-textfield__label' for='firstname'>Nom</label>
-                            <span class="mdl-textfield__error">El nom només pot contenir lletres</span>
-                        </div>
-                        <br/>
-                        <div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
-                            <input class='mdl-textfield__input' type='text' id='lastname' pattern="[^0-9]*">
-                            <label class='mdl-textfield__label' for='lastname'>Primer cognom</label>
-                            <span class="mdl-textfield__error">El cognom només pot contenir lletres</span>
-                        </div>
-                        <br/>
-                        <div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
-                            <input class='mdl-textfield__input' type='text' id='mail' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                            <label class='mdl-textfield__label' for='mail'>Correu electronic</label>
-                            <span class="mdl-textfield__error">No és un format de correu vàlid</span>
-                        </div>
-                        <legend>Estudis</legend>
-                        <div class='subtitol'>Donde te gustaria ir?</div>
-                        <div class='opcions'>
-                            <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for='estudisPrevisESO'>
-                                <input type='radio' id='estudisPrevisESO' name='estudisPrevis' value='eso' class='mdl-radio__button' checked>
-                                <span class='mdl-radio__label'>LOS ANGELES</span>
-                            </label>
-                            <br/>
-                            <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for='estudisPrevisPFI'>
-                                <input type='radio' id='estudisPrevisPFI' name='estudisPrevis' value='pfi' class='mdl-radio__button'>
-                                <span class='mdl-radio__label'>IBIZA</span>
-                            </label>
-                            <br/>
-                            <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for='estudisPrevisMTJ'>
-                                <input type='radio' id='estudisPrevisMTJ' name='estudisPrevis' value='mitja' class='mdl-radio__button'>
-                                <span class='mdl-radio__label'>AFRICA</span>
-                            </label>
-                        </div>
-                        
-                        
-                        <legend>Vida personal</legend>
-                        <div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
-                            <select class='mdl-textfield__input' name='viatjar'>
-                                <option value=''></option>
-                                <option value='no'>No</option>
-                                <option value='setmana'>Entre setmana</option>
-                                <option value='total'>Total</option>
-                            </select>
-                            <label class='mdl-textfield__label' for='octane'>Disposició per viatjar</label>
-                        </div>
-                        <br/>
-                        <div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
-                            <textarea rows='2' class='mdl-textfield__input' type='text' id='aficionsID'></textarea>
-                            <label class='mdl-textfield__label' for='aficionsID'>
-                                Aficions
-                            </label>
-                        </div>
-                        <br/>
-                        <div class='boto'>
-                            <button type='submit' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'>Enviar</button>
-                        </div>
-                    </form>
-        
-        
-
-
-                </div>
-
-                <div id='cajaderecha'>
-
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12887.551787323631!2d-115.18203732537238!3d36.14494149869949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c40d424ec785%3A0x46f0f1df163094c4!2sResorts%20World%20Las%20Vegas!5e0!3m2!1ses!2ses!4v1583923078903!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
-                </div>
-
-
-
-
-
-
-            </div>
-            
+            Pàgina amb informacio de contacte
         </div>
         <div id='backofficeUsuaris'>
             <div id='backofficeUsuarisLoading'>Carregant usuaris ...</div>

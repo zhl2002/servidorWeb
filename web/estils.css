@@ -15,50 +15,29 @@ table, th, td {
     border-collapse: collapse;
     border: 1px solid black;
 }
-
-.botoMenu {
-    color: blue;
-    cursor: pointer;
-    margin: 0 16px;
-}
-
-.botoMenu:hover {
-    text-decoration: underline;
-}
-
 body {
     font-family: "Open Sans";
 }
-
+body > div {
+    display: none;
+}
 body > #frontendHome {
     display: flex;
 }
-
-body > #frontendPresentacio {
-    display: none;
+.botoMenu {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin: 0 16px;
+    text-align: center;
+}
+.botoMenu:hover {
+    color:red;
 }
 
-body > #frontendProductes {
-    display: none;
-}
-
-body > #frontendProductes > #productesContinguts {
+#productesContinguts {
     width: 100%;
 }
-
-body > #frontendContacte {
-    display: none;
-}
-
-body > #backofficeUsuaris {
-    display: none;
-}
-
-body > #backofficeProductes {
-    display: none;
-}
-
-body > #popups {
+#popups {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     display: none;
@@ -69,11 +48,64 @@ body > #popups {
     height: 100%;
     width: 100%;
 }
-
 #popups > div {
     border: solid 1px black;
     background-color: lightcyan;
     display: none;
 }
 
+#frontendMenuWeb {
+    width: 100%;
+    justify-content: center;
+    background-color: rgb(28, 48, 102);
+    font-family: 'Trade Winds', cursive;
+}
+#fotomenu {
+    height: 50;
+    width: 50;
+    margin-left: 10px;
+}
 
+#frontendMenuMobil { 
+    background-color: rgb(28, 48, 102) ;
+    height: 110px;
+    position: sticky;
+    align-items: center;
+    font-family: 'Trade Winds', cursive;
+
+}
+
+#frontendContacte{
+    text-align: center;
+    background-image: url("/web/imatges/cielo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+#cajaizquierda{
+    height: 500px;
+    width: 500px;
+    margin-top: 100px;
+    margin-left: 100px;
+    background-color:transparent;
+    border: solid 2px rgb(9, 57, 131);
+
+}
+
+#cajaderecha{
+    height: 450px;
+    width: 500px;
+    background-color: white;
+    margin-right: 100px;
+    margin-top: 100px;
+    border: solid 2px rgb(9, 57, 131);
+
+}
+
+#cajas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}

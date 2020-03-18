@@ -91,4 +91,25 @@ Cal que feu una pàgina web d’una agència de viatges amb les següents especi
 | 18/05/20 | Pàgina de productes individual |
 | 25/05/20 | Revisió, bugs arreglats i entrega |
 
+Per fer les entregues cal que feu un fork al vostre compte de github
+
+- Aneu a 'github' i identifiqueu-vos amb el vostre usuari (o doneu-vos d'alta)
+- Feu un 'fork' amb el botó d'aquesta mateixa pàgina
+- Descarregueu el codi del vostre 'fork' amb el git clone, que serà semblant a:
+```
+git clone https://github.com/ELVOSTREUSUARIGITHUB/servidorWeb.git
+```
+- Modifiqueu el codi del vostre fork per treballar
+- El primer cop canviareu la carpeta 'web' per la vostra i feu un 'npm install' perquè descarregui els 'node_modules' del vostre sistema
+- Modifiqueu l'arxiu README.md, que hi quedi només el vostre nom
+- Envieu els canvis a github amb:
+```
+git add .
+git commit -m "Explicació de les modificacions que heu fet"
+git push
+```
+- Aquestes tres últimes línies les haureu d'anar fent cada cop que envieu canvis a github
+- El primer cop us demanarà el mail i codi de github
+
+
 
