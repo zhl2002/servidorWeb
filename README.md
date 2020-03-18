@@ -93,15 +93,17 @@ Cal que feu una pàgina web d’una agència de viatges amb les següents especi
 
 Per fer les entregues cal que feu un fork al vostre compte de github
 
-- Aneu a 'github' i identifiqueu-vos amb el vostre usuari (o doneu-vos d'alta)
+- Identifiqueu-vos a 'github' amb el vostre usuari (o doneu-vos d'alta)
 - Feu un 'fork' amb el botó d'aquesta mateixa pàgina
 - Descarregueu el codi del vostre 'fork' amb el git clone, que serà semblant a:
 ```
 git clone https://github.com/ELVOSTREUSUARIGITHUB/servidorWeb.git
 ```
 - Modifiqueu el codi del vostre fork per treballar
-- El primer cop canviareu la carpeta 'web' per la vostra i feu un 'npm install' perquè descarregui els 'node_modules' del vostre sistema
+- El primer cop canviareu la carpeta 'web' per la vostra
+- El primer cop feu un 'npm install' perquè descarregui els 'node_modules' del vostre sistema
 - Modifiqueu l'arxiu README.md, que hi quedi només el vostre nom
+- Comproveu que funciona amb 'npm run app'
 - Envieu els canvis a github amb:
 ```
 git add .
