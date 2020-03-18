@@ -29,7 +29,7 @@ sudo apt install git
 
 **NOTA:** Mireu la part d'entregues per fer el fork d'aquest servidor
 
-Cal descarregar el codi de 'github'
+Per descarregar el codi del servidor
 ```
 git clone https://github.com/optimisme/servidorWeb.git
 ```
