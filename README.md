@@ -108,6 +108,7 @@ git clone https://github.com/ELVOSTREUSUARIGITHUB/servidorWeb.git
 - Comproveu que funciona amb 'npm run app'
 - Envieu els canvis a github amb:
 ```
+cd servidorWeb (o la carpeta del fork)
 git add .
 git commit -m "Explicació de les modificacions que heu fet"
 git push
