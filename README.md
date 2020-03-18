@@ -80,6 +80,8 @@ Cal que feu una pàgina web d’una agència de viatges amb les següents especi
 
 ### Entregues ###
 
+| Data | Entrega |
+| --- | --- |
 | 09/03/20 | Menú |
 | 16/03/20 | Presentació i contacte |
 | 23/03/20 | Productes |
