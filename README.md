@@ -114,8 +114,7 @@ npm run app
 - Envieu els canvis a github amb:
 ```
 cd servidorWeb (o la carpeta del fork)
-git config user.email "ELCORREUDEGITHUB"
-(Aquesta comanda només cal fer-la un cop)
+git config user.email "ELCORREUDEGITHUB" (Aquesta comanda només cal fer-la un cop)
 
 git add .
 git commit -m "Explicació de les modificacions que heu fet"
