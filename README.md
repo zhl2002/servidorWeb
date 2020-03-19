@@ -121,7 +121,7 @@ git commit -m "Explicació de les modificacions que heu fet"
 git push
 ```
 - Aquestes tres últimes línies les haureu d'anar executant cada cop que envieu canvis a github
-- El primer cop us demanarà el mail i codi de github
+- El primer cop us demanarà el mail i codi de github.
 
 
 
