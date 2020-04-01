@@ -2,63 +2,56 @@
 .desktop { display: flex !important; }
 .mobile  { display: flex !important; }
 @media only screen and (max-device-width: 599px) { .desktop { display: none !important; } }
-@media only screen and (min-device-width: 600px) { .mobile  { display: none !important; } }
+@media only screen and (min-device-width: 600px) { .mobile { display: none !important; } }
 .flex       { display: flex; }
 .flexRow    { flex-direction: row; }
 .flexColumn { flex-direction: column; }
 .none       { display: none; }
 .halfWidth  { max-width: 50%; }
 .botoIcona  { cursor: pointer; }
-
 /* Definicions específiques */
+#frontendMenuMobil {
+  background: url('lago.jpg');
+  height: 100px;
+  width: auto;
+  top: 0;
+  width: 100%;
+  opacity: 0.7;
+  background-color: black;
+  display: flex;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  position: sticky;
+  display:none;
+}
 table, th, td {
     border-collapse: collapse;
     border: 1px solid black;
 }
-
-.botoMenu {
-    color: blue;
-    cursor: pointer;
-    margin: 0 16px;
-}
-
-.botoMenu:hover {
-    text-decoration: underline;
-}
-
 body {
     font-family: "Open Sans";
 }
-
+body > div {
+    display: none;
+}
 body > #frontendHome {
     display: flex;
 }
-
-body > #frontendPresentacio {
-    display: none;
+.botoMenu {
+    cursor: pointer;
+    margin: 0 16px;
+    font-size: 2em;
 }
-
-body > #frontendProductes {
-    display: none;
+.botoMenu:hover {
+    text-decoration: underline;
 }
-
-body > #frontendProductes > #productesContinguts {
+#productesContinguts {menu
     width: 100%;
 }
-
-body > #frontendContacte {
-    display: none;
-}
-
-body > #backofficeUsuaris {
-    display: none;
-}
-
-body > #backofficeProductes {
-    display: none;
-}
-
-body > #popups {
+#popups {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     display: none;
@@ -69,11 +62,45 @@ body > #popups {
     height: 100%;
     width: 100%;
 }
-
 #popups > div {
     border: solid 1px black;
     background-color: lightcyan;
     display: none;
 }
 
+#frontendMenuWeb {
+    background: url('lago.jpg');
+    justify-content: center;
+    height: 100px;
+    width: auto;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.oscuro{
+  opacity: 0.5;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+  height: 30px;
+}
 
+#menuContainer {
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    top: 100%;
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
