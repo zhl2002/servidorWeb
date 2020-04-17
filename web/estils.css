@@ -26,7 +26,6 @@
   background-color: blue;
   position: sticky;
   display:none;
-  color: white;
 }
 table, th, td {
     border-collapse: collapse;
@@ -41,12 +40,21 @@ body > div {
 body > #frontendHome {
     display: flex;
 }
+
 .botoMenu {
     cursor: pointer;
     margin: 0 16px;
     font-size: 2em;
-	color: white;
 }
+
+#frontendMenuWeb .botoMenu {
+ color:white;
+}
+
+#frontendMenuMobil .botoMenu {
+ color:black;
+}
+
 .botoMenu:hover {
     text-decoration: underline;
 }
@@ -80,7 +88,6 @@ body > #frontendHome {
     display: flex;
     align-items: center;
     flex-direction: row;
-	color:black;
 }
 .oscuro{
   opacity: 0.5;
