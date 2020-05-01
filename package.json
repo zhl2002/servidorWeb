@@ -11,7 +11,7 @@
   "private": true,
   "dependencies": {
     "crypto": "latest",
-    "express": "latest",
+    "express": "*",
     "mysql": "latest",
     "supervisor": "latest"
   },
