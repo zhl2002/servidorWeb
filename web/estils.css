@@ -118,8 +118,8 @@ body > #frontendHome {
 }
 
 .producte {
-	margin:20px;
-	padding:20px;
+	margin:30px;
+	padding:30px;
 	border: solid 1px grey;
 	background-color: white;
 	display: flex;
