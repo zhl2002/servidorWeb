@@ -10,10 +10,10 @@
   "homepage": "http://www.exemple.com/",
   "private": true,
   "dependencies": {
-    "crypto": "latest",
+    "crypto": "*",
     "express": "*",
-    "mysql": "latest",
-    "supervisor": "latest"
+    "mysql": "*",
+    "supervisor": "*"
   },
   "devDependencies": {},
   "bundleDependencies": [],
