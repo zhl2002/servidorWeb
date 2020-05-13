@@ -142,3 +142,22 @@ body > #frontendHome {
 	cursor: pointer;
 	font-weight: bold;
 }
+ .peu {
+ background-color: black;
+ color: white;
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ display: flex;
+ justify-content: space-evenly;
+}
+
+.formulari {
+	margin:30px;
+	padding:30px;
+	border: solid 1px black;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
