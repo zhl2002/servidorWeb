@@ -14,7 +14,7 @@ async function inicia () {
     popups = new ObjPopups()
     seccioBackofficeUsuaris = new ObjSeccioBackofficeUsuaris()
     seccioFrontendProductes = new ObjSeccioFrontendProductes()
-	seccioFrontendProducte = new ObjSeccioProducte()
+	seccioFrontendProducte = new ObjSeccioFrontendProducte()
     // Inicia les funcions de navegació HTML5
     navegacio.inicia()
 

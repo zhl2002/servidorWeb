@@ -26,8 +26,6 @@ class ObjSeccioFrontendProducte {
 			imatges = JSON.parse(valor.imatge)
             codiHTML = codiHTML + '<div class="detall" onclick=\'navegacio.canviaSeccio("frontendProducte&' + cntProducte + '")\'>'
             codiHTML = codiHTML + '<img src="' + imatges[0] + '" width="100" />'
-			codiHTML = codiHTML + '<img src="' + imatges[1] + '" width="100" />'
-			codiHTML = codiHTML + '<img src="' + imatges[2] + '" width="100" />'
             codiHTML = codiHTML + '<h3>' + valor.nom +'</h3>'
             codiHTML = codiHTML + '<div>' + valor.descripcio +'</div>'
             codiHTML = codiHTML + '<div>' + valor.preu +' €</div>'

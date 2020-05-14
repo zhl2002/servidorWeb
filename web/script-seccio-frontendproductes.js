@@ -34,7 +34,7 @@ class ObjSeccioFrontendProductes {
 				codiHTML = codiHTML + '<div class="fletxaImatgesProducte" onclick="seccioFrontendProductes.canviImatge(\'seguent\','+cntProducte+')">&gt;</div>'
 				codiHTML = codiHTML + '</div>'  
 
-                codiHTML = codiHTML + '<h3 onclick=\'navegacio.canviaSeccio("frontendProducte&' + valor.id + '")\'>' + valor.nom +'</h3>'
+                codiHTML = codiHTML + '<h3 class="botoIcona" onclick=\'navegacio.canviaSeccio("frontendProducte&' + valor.id + '")\'>' + valor.nom +'</h3>'
                 codiHTML = codiHTML + '<div>' + valor.descripcio +'</div>'
                 codiHTML = codiHTML + '<div>' + valor.preu +' €</div>'
                 codiHTML = codiHTML + '</div>'
