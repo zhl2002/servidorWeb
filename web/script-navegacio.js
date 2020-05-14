@@ -27,13 +27,16 @@ class ObjNavegacio {
 
     // Amaga la secció anterior i mostra la nova
     mostraSeccio (seccioNova) {
-        let refActual = document.getElementById(this.seccioActual),
-            refNova = document.getElementById(seccioNova)
+        let idActual = this.seccioActual.split('&')[0],
+            arr = seccioNova.split('&'),
+            idNova = arr[0],
+            refActual = document.getElementById(idActual),
+            refNova = document.getElementById(idNova)
 
         // S'amaga la seccio que estava visible i es mostra la que s'ha demanat
         refActual.style.display = 'none'
         refNova.style.display = 'flex'
-
+        
         // La seccio actual passa a ser la que s'ha demanat
         this.seccioActual = seccioNova
 
@@ -44,44 +47,6 @@ class ObjNavegacio {
         this.dadesSeccio = null
 
         // Executa la funció de càrrega d'aquesta secció si és necessari
-        iniciaSeccio(seccioNova)
+        iniciaSeccio(idNova, arr[1])
     }
-}
-
-
-
-function mostraMenu (evt) {
-
-    let refBody = document.getElementsByTagName('body')[0],
-        refSmall = document.getElementById('frontendMenuMobil'),
-        refContainer = document.getElementById('menuContainer'),
-        estilSmall = window.getComputedStyle(refSmall, ''),
-        estilContainer = window.getComputedStyle(refContainer, ''),
-        midaContainer = parseInt(estilContainer.getPropertyValue('height')),
-        altura = - midaContainer + 10
-
-
-    refBody.style.overflow = 'hidden' // Treure scroll
-    refSmall.style.visibility = 'visible'
-    refSmall.style.display = 'flex';
-    refSmall.style.opacity = 1
-
-    refContainer.style.transform =  'translateY(' + altura + 'px)'
-}
-function amagaMenu (evt) {
-    let refBody = document.getElementsByTagName('body')[0],
-        refSmall = document.getElementById('frontendMenuMobil'),
-        refContainer = document.getElementById('menuContainer')
-
-    refBody.style.overflow = 'auto' // Recuperar scroll
-
-    refSmall.style.opacity = 0
-    setTimeout(() => { refSmall.style.visibility = 'hidden' }, 500)
-
-    refContainer.style.transform = 'translateY(0)'
-}
-function navega (evt, lloc) {
-    evt.stopPropagation() // Evitar que executi 'amagaMenu' des de 'menuSmall'
-    //location.href = lloc
-    console.log('Navegar a ', lloc)
 }
