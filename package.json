@@ -4,16 +4,16 @@
   "description": "Servidor base",
   "keywords": [],
   "author": {
-    "name": "Nom de l'autor",
+    "name": "Ziheng",
     "email": "autor@exemple.com"
   },
   "homepage": "http://www.exemple.com/",
   "private": true,
   "dependencies": {
-    "crypto": "latest",
-    "express": "latest",
-    "mysql": "latest",
-    "supervisor": "latest"
+    "crypto": "*",
+    "express": "*",
+    "mysql": "*",
+    "supervisor": "*"
   },
   "devDependencies": {},
   "bundleDependencies": [],
